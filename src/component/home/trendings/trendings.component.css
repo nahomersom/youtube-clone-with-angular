@@ -1,0 +1,147 @@
+
+
+.header button {
+  padding-bottom: 10px;
+  margin-left: -4px;
+  border: 1px solid #cccc;
+  outline-color: lightskyblue;
+  outline-style: none;
+  width: 80px;
+  height: 37px;
+}
+
+.header .search .apps {
+  margin-left: 500px;
+  background-color: white;
+}
+
+.header .user-icon {
+  margin-left: 30px;
+  margin-top: 1px;
+  float: right;
+  background: #4f8bfa;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.header .user-icon p {
+  color: #fff;
+  text-align: center;
+  margin-left: 9px;
+}
+
+.types {
+  margin-top: -850px;
+  margin-left: 200px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.types button {
+  overflow: hidden;
+  margin-left: 8px;
+  background-color: rgb(0 0 0 / 5%);
+  border-radius: 89px;
+  border: 1px solid #cccc;
+  padding: 5px;
+}
+
+#nav-menu {
+  background-color: white;
+  width: 450px;
+  height: 100vh;
+  margin-top: -128px;
+}
+.nav-menu-items li{
+padding-top:20px;
+padding-left: 20px;
+}
+
+.videos {
+  margin-bottom: 1000px;
+  width: 89%;
+  
+}
+
+.video-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 3rem 1rem;
+  padding: 3rem 0;
+  margin: 0 1.5rem;
+  margin-left: 200px;
+  width: 100%;
+  background-color: #f9f9f9;
+}
+
+.video-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 100px;
+}
+
+.thumbnail {
+  position: relative;
+  display: flex;
+}
+
+.thumbnail::before {
+  content: attr(data-duration);
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.85);
+  color: white;
+  right: 5px;
+  bottom: 5px;
+  padding: 0.1em 0.3em;
+  border-radius: 0.3em;
+  font-size: 0.9em;
+}
+
+.thumbnail-image {
+  width: 100%;
+  height: 100%;
+  min-width: 250px;
+  min-height: 150px;
+  background-color: #aaa;
+}
+
+.channel-icon {
+  margin-top: 7px;
+  margin-right: 0.75rem;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  background-color: #aaa;
+}
+
+.video-details {
+  margin-top: -40px;
+  margin-left: 40px;
+  display: grid;
+}
+
+.video-details a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+
+.video-metadata {
+  color: #606060;
+  font-size: 15px;
+}
+i {
+  margin-right: 20px;
+}
+.menu{
+  margin-right: 10px;
+}
+a{
+  cursor:pointer;
+}

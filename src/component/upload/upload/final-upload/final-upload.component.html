@@ -1,0 +1,112 @@
+<div class="card">
+  <div class="card-content">
+    <p>Finalizing Your Video</p>
+  </div>
+  <form
+    #uploadVideo="ngForm"
+    [formGroup]="uploadForm"
+    (ngSubmit)="onSubmit(uploadVideo.value)"
+  >
+    <div class="field-container">
+      <input
+        class="field-input"
+        style="
+          margin-top: 120px;
+          width: 60%;
+          margin-left: 20px;
+          height: 80px;
+          padding: 12px 20px;
+          margin-bottom: -200px;
+          box-sizing: border-box;
+        "
+        id="inputid"
+        type="text"
+        placeholder="Title of the video"
+        name="title"
+        formControlName="video_title"
+      />
+      <span
+        *ngIf="
+          !uploadForm.get('video_title').valid &&
+          uploadForm.get('video_title').touched
+        "
+        class="help-block"
+      >
+        <span *ngIf="uploadForm.get('video_title').errors['required']"
+          >title of the video is required!</span
+        >
+        <span *ngIf="uploadForm.get('video_title').hasError('minlength')"
+          >title length too short minimum length is 6!!!</span
+        >
+        <span *ngIf="uploadForm.get('video_title').hasError('maxlength')"
+          >title length too long maximum length is 20!!!</span
+        >
+      </span>
+      <input
+        class="field-input"
+        style="
+          margin-top: 50px;
+          height: 110px;
+          width: 60%;
+          margin-left: 20px;
+
+          padding: 12px 20px;
+
+          box-sizing: border-box;
+        "
+        type="text"
+        placeholder="Description of the video"
+        name="description"
+        formControlName="description_of_the_video"
+      />
+      <span
+        *ngIf="
+          !uploadForm.get('description_of_the_video').valid &&
+          uploadForm.get('description_of_the_video').touched
+        "
+        class="help-block"
+      >
+        <span
+          *ngIf="uploadForm.get('description_of_the_video').errors['required']"
+          >Description of the video is required!</span
+        >
+        <span
+          *ngIf="
+            uploadForm.get('description_of_the_video').hasError('minlength')
+          "
+          >title length too short minimum length is 10!!!</span
+        >
+        <span
+          *ngIf="
+            uploadForm.get('description_of_the_video').hasError('maxlength')
+          "
+          >title length too long maximum length is 200!!!</span
+        >
+      </span>
+
+      <div class="upload-button">
+        <input
+          style="margin-top: 193px; text-align: center; margin-left: -250px"
+          type="file"
+          name="finalizingUpload"
+          id="fileToUpload"
+          formControlName="thumbnail"
+          accept="image/*"
+          (change)="onThumbnailSelected($event)"
+        />
+
+        <input
+          type="submit"
+          class="btn btn-primary"
+          [disabled]="uploadForm.invalid"
+          value="finish upload"
+        />
+      </div>
+      <p style="margin-top: -90px; margin-left: 20px">Upload thumbnail:</p>
+      <div class="video" style="margin-left: 25px; margin-top: -480px">
+        <iframe width="40%" height="30%" class="logo" [src]="videoSrc">
+        </iframe>
+      </div>
+    </div>
+  </form>
+</div>

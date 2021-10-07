@@ -1,0 +1,30 @@
+<app-nav-bar></app-nav-bar>
+
+<div class="containers">
+    <div class="sidebar">
+        <div class="contents">
+                      <ul>
+
+            <div *ngFor="let video of videos">
+                <li><a (click)="onWatchVideo(video.id)">
+        <img class="video-image"src="{{video.thumbnail}}"alt='' class='thumbnail-image' style="width:150px;height:100px;"><span>{{video.video_title}}</span>
+    </a>
+
+             
+            </div>
+            <br />
+  
+        </ul>
+                       
+           
+       
+         
+        </div>
+</div>
+<div class="frame">
+    
+                  <iframe width=1350 height=600  alt='img' [src]="play">
+
+    
+    
+    

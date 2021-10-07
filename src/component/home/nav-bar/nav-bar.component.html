@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:wght400;700&display=swap'>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <div class="header">
+
+            <form class="search">
+                <input type="text" placeholder="search">
+
+                <button>
+                    <img class="search-icon" src={{magnify}}>
+                </button>
+                <img src={{mic}}>
+                <a [routerLink]="['/upload']"><img class="apps" src="{{uploadVideo}}"></a>
+                 <img src="{{apps}}">
+                 <img src="{{bell}}">
+
+                <div class="user-icon">
+                    <p>N</p>
+                </div>
+            </form>
+        </div>
+
+    </header>
+    <div id="navbar">
+        <a href="" class="menu-bars" id="hide-menus">
+            <img class="menu" style="padding-top:10px;"> 
+        </a>
+    </div>
+    <nav id="nav-menu">
+        <ul class="nav-menu-items">
+            <div id="navbar-toogle">
+            
+     
+            <img class="menu" src="{{menu}}">  <a [routerLink]="" (click)="goToStudio()" > <img class="logo" src="{{logo}}" ></a>
+          
+            </div>
+
+            <div class="nav-section">
+                <li class="nav-text"><a [routerLink]="['/home']"><i class="fas fa-home nav-icon fa-fw"></i>Home</a></li>
+                <li class="nav-text"><a href=""><i class="fas fa-compass fa-fw"></i>Explore</a></li>
+                <li class="nav-text"><a href=""><i class="fas fa-play-circle"></i>Subscription</a></li>
+            </div>
+            <hr />
+            <div class="nav-section">
+                <li class="nav-text"><a [routerLink]="" (click)="goToStudio()"><i class="fas fa-play-circle"></i>Library</a></li>
+                <li class="nav-text"><a href=""><i class="fas fa-history"></i>History</a></li>
+                <li class="nav-text"><a [routerLink]=""(click)="goToStudio()" ><i class="fas fa-play"></i>Your Videos</a></li>
+
+            </div>
+        </ul>
+        <hr />
+    
+    </nav>

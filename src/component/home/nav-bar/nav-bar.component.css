@@ -1,0 +1,139 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+ 
+}
+
+
+body {
+  /* this is to make no margin in every direction*/
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+a{
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    color:black;
+   
+}
+ul{
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+    list-style-type: none;
+}
+hr{
+    margin-left: -50px;
+    width: 50%;
+}
+
+.header {
+  margin-top: 15px;
+  display: inline-flex;
+}
+#nav-menu .nav-menu-items #navbar-toogle{
+margin-top: 75px;
+margin-left: -20px;
+
+}
+
+nav ul #navbar-toogle .logo {
+ 
+  width: 90px;
+  height: 20px;
+}
+.nav-section{
+    padding-top: 20px;
+    margin-left: -40px;
+}
+
+.header .search {
+  margin-left: 15px;
+  margin-top: 1px;
+}
+.header .search button {
+    
+    margin-left:0px;
+    padding-top: 7px;
+  }
+  
+.header input[type="text"] {
+  margin-left: 550px;
+  height: 35px;
+  width: 550px;
+  border: 1px solid #cccc;
+  outline-color: lightskyblue;
+  padding-top: 19px;
+  padding-bottom: 14px;
+}
+
+.header button {
+  padding-bottom: 10px;
+  margin-left: -4px;
+  border: 1px solid #cccc;
+  outline-color: lightskyblue;
+  outline-style: none;
+  width: 80px;
+  height: 37px;
+}
+
+.header .search .apps {
+  margin-left: 500px;
+  background-color: white;
+}
+
+.header .user-icon {
+  margin-left: 30px;
+  margin-top: 1px;
+  float: right;
+  background: #4f8bfa;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.header .user-icon p {
+  color: #fff;
+  text-align: center;
+  margin-left: 9px;
+  margin-top:15px;
+}
+
+.types {
+  margin-top: -850px;
+  margin-left: 200px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.types button {
+  overflow: hidden;
+  margin-left: 8px;
+  background-color: rgb(0 0 0 / 5%);
+  border-radius: 89px;
+  border: 1px solid #cccc;
+  padding: 5px;
+}
+
+#nav-menu {
+  background-color: white;
+  width: 450px;
+  height: 100vh;
+  margin-top: -128px;
+}
+.nav-menu-items li{
+padding-top:20px;
+padding-left: 20px;
+}
+
+
+i {
+  margin-right: 20px;
+}
+.menu{
+  margin-right: 10px;
+}

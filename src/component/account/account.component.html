@@ -1,0 +1,54 @@
+<html>
+  <head>
+    <title>Youtube Clone</title>
+  </head>
+
+  <body>
+    <div class="container">
+     <span class="help-block">{{errors}}</span>
+      <h2>Login</h2>
+      <form #postAuth="ngForm" [formGroup]="loginForm" (ngSubmit)="onSubmit(postAuth.value)">
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            placeholder="Enter email"
+            formControlName = "email"
+          />
+          <span
+              *ngIf="!loginForm.get('email').valid && loginForm.get('email').touched"
+              class="help-block">
+              <span *ngIf="loginForm.get('email').errors['email']">This email is invalid!</span>
+              <span *ngIf="loginForm.get('email').errors['required']">your email is required!</span>
+
+            </span>
+        </div>
+        <div class="form-group">
+          <label for="pwd">Password</label>
+          <input
+            type="password"
+            class="form-control"
+            id="pwd"
+            placeholder="Enter password"
+            formControlName = "password"
+          />
+          <span
+          *ngIf="!loginForm.get('password').valid && loginForm.get('password').touched"
+          class="help-block">
+          <span *ngIf="loginForm.get('password').hasError('minlength')">password length too short!!!</span>
+      
+          <span *ngIf="loginForm.get('password').errors['required']">your password is required!</span>
+
+
+        </span>
+        </div>
+        <div class="checkbox">
+          <label></label>
+        </div>
+        <button type="submit" class="btn btn-primary" [disabled]="loginForm.invalid">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>

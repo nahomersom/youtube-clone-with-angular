@@ -1,0 +1,23 @@
+
+<head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <div class="header">
+            <img class="menu" src="{{menu}}">
+            <img class="logo" src="{{studioLogo}}">
+            <form class="search">
+                <input type="text" placeholder="search">
+                <button>
+                    <img class="search-icon" src="{{magnify}}">
+                </button>
+               
+                <a [routerLink]="['/upload']"><img class="apps" src="{{uploadVideo}}"></a>
+              
+                <div class="user-icon">
+                    <p>N</p>
+                </div>
+            </form>
+        </div>
+    </header>

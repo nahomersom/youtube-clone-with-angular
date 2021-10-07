@@ -1,0 +1,79 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+ 
+}
+
+body {
+  /* this is to make no margin in every direction*/
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+.header {
+    margin-top: 15px;
+    display: inline-flex;
+
+    width: 100%;
+    box-shadow:  2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.header .menu {
+    margin-left: 2px;
+    margin-bottom: 25px;
+}
+
+.header .logo {
+    margin-left: 10px;
+    width: 90px;
+    height: 20px;
+}
+
+.header .search {
+    margin-left: -50px;
+    margin-top: 1px;
+}
+
+.header input[type="text"] {
+    margin-left: 710px;
+    height: 35px;
+    width: 700px;
+    border: 1px solid #cccc;
+    outline-color: lightskyblue;
+    padding-top: 19px;
+    padding-bottom: 14px;
+}
+
+.header button {
+    padding-bottom: 10px;
+    margin-left: -4px;
+    border: 1px solid #cccc;
+    outline-color: lightskyblue;
+    outline-style: none;
+    width: 80px;
+    height: 37px
+}
+
+.header .search .apps {
+    margin-left: 250px;
+    background-color: white;
+}
+
+.header .user-icon {
+    margin-left: 30px;
+    margin-top: 1px;
+    float: right;
+    background: #4f8bfa;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.header .user-icon p {
+    color: #fff;
+    text-align: center;
+    margin-left: 9px;
+}
