@@ -1,4 +1,4 @@
-<div class="card" >
+<!-- <div class="card" >
     <div class="upload-icon">
 
         <img src="{{upload}}">
@@ -16,17 +16,22 @@
    
 
 
-</div>
-<!-- <div id="loader">
+</div> -->
+<div id="loader">
 <div tabindex="0" class="e-card" id="basic">
     <div class="e-card-header">
         <h3>Upload videos</h3>
     </div>
     <div class="e-card-separator"></div>
     <div class="e-card-content">
-        Communicating with Windows 10 and Other Apps, the second in a five-part series written by Succinctly series
-        author Matteo Pagani. To download the complete white paper, and other papers in the series, visit
-        the White Paper section of Syncfusion’s Technology Resource Portal.
+        <div class="e-avatar e-avatar-xlarge e-avatar-circle" style="width:136px;height:136px;">
+            <img src="{{upload}}" width="136" height="136">
+        </div>
+        
+        <h3> Drag and drop video files to upload</h3>
+        <p>Your videos will be private until you publish them</p>
+        <ejs-uploader cssClass="e-info" #defaultupload  autoUpload='false' [maxFileSize]=1000000000 (change)="onFileSelected($event)" multiple = 'false'   allowedExtensions = '.mp4,.mkv,.gif,.mpeg,.miv'[buttons]="buttons"></ejs-uploader>
+        
     </div>
 </div>
-</div> -->
+</div>

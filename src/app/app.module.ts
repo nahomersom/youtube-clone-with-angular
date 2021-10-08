@@ -6,8 +6,6 @@ import { Router, RouterModule, Routes } from '@angular/router';
 import { ComponentModule } from 'src/component/component.module';
 
 import { AppComponent } from './app.component';
-import { NavBarComponent } from '../component/home/nav-bar/nav-bar.component';
-import { TrendingsComponent } from '../component/home/trendings/trendings.component';
 import { AuthComponent } from './auth/auth.component';
 import { FormsModule } from '@angular/forms';
 
@@ -31,8 +29,7 @@ const routes: Routes = [
     RouterModule.forRoot(routes),
     ComponentModule,
     HttpClientModule,
-    
-      
+
   ],
   exports: [],
   

@@ -21,6 +21,7 @@
     "@angular/platform-browser-dynamic": "~12.2.0",
     "@angular/router": "~12.2.0",
     "@ctrl/ngx-emoji-mart": "^6.0.1",
+    "@syncfusion/ej2-angular-inputs": "^19.3.44",
     "@syncfusion/ej2-layouts": "^19.3.44",
     "angular-emoji": "^0.1.45",
     "bootstrap": "^5.1.1",

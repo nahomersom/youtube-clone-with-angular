@@ -36,7 +36,7 @@ export class FinalUploadComponent implements OnInit {
     
     });
     this.uploadForm = new FormGroup({
-       'video_title': new FormControl(null,[Validators.required,Validators.minLength(6),Validators.maxLength(20)]),
+       'video_title': new FormControl(null,[Validators.required,Validators.minLength(2),Validators.maxLength(100)]),
        'description_of_the_video' : new FormControl(null,[Validators.required,Validators.minLength(10),Validators.maxLength(200) ]),
        'thumbnail' : new FormControl(null,[Validators.required, ])
     });

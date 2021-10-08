@@ -14,6 +14,7 @@ import { StudioNavBarComponent } from './home/nav-bar/studio-nav-bar/studio-nav-
 
 
 
+
 const routes: Routes = [
   { path: '', loadChildren: () => import('./account/account.module').then(m => m.AccountModule) },
   { path: 'u', loadChildren: () => import('./upload/upload.module').then(m => m.UploadModule) },
@@ -26,13 +27,15 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [
+    
     StudioComponent,
     PlayerComponent,
     NavBarComponent,
     TrendingsComponent,
     HomeComponent,
     PlayerPipe,
-    StudioNavBarComponent
+    StudioNavBarComponent,
+  
    
     
   ],
@@ -40,7 +43,7 @@ const routes: Routes = [
     RouterModule.forChild(routes),
     CommonModule,
     FormsModule, 
-    
+  
   ],
   exports: [NavBarComponent,TrendingsComponent],
 })

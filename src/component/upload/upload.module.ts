@@ -5,7 +5,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { FinalUploadComponent } from './upload/final-upload/final-upload.component';
 import { ReactiveFormsModule } from '@angular/forms';
-
+import { UploaderModule  } from '@syncfusion/ej2-angular-inputs';
+import {TextBoxModule} from '@syncfusion/ej2-angular-inputs';
 const routes: Routes = [
   {
     path: "l",
@@ -23,8 +24,10 @@ const routes: Routes = [
     RouterModule.forChild(routes),
     HttpClientModule,
     ReactiveFormsModule,
-    CommonModule
-    
+    CommonModule,
+    UploaderModule,
+    TextBoxModule
+
   ],
   exports:[RouterModule]
 })

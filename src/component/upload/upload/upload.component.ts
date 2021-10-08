@@ -15,6 +15,11 @@ export class UploadComponent implements OnInit {
    selected:boolean = false;
    video = null;
    videoName = null;
+   public buttons: Object = {
+    browse: 'Select file',
+    
+  
+     };
   constructor(private router:Router) { }
 
   ngOnInit(): void {
@@ -26,16 +31,19 @@ export class UploadComponent implements OnInit {
     reader.readAsDataURL(this.selectedFile);
     reader.onload = () => {
         this.video = reader.result;
-      
+    this.videoName = this.video;
+   this.router.navigate(['/upload/finalizingUpload',this.videoName]);
     };
 
-    if(this.selectedFile.size > 30720000){
-     this.error = "the file is too big";
+  //   if(this.selectedFile.size > 30720000){
+  //    this.error = "the file is too big";
       
-   };
-   if(!this.error){
-   this.selected = true;
-   } 
+  //  };
+  //  if(!this.error){
+  //  this.selected = true;
+  //  } 
+
+   
   }
    uploadVideo(){
     this.videoName = this.video;
