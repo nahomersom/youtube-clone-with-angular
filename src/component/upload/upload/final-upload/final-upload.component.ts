@@ -19,7 +19,11 @@ export class FinalUploadComponent implements OnInit {
   selectedThumbnail = null;
   thumbnail = null;
   error:string = null;
+  public buttons: Object = {
+    browse: '+',
+    
   
+     };
   date_of_upload = formatDate(new Date(), 'yyyy/MM/dd', 'en');;
   public constructor(
     private route: ActivatedRoute,

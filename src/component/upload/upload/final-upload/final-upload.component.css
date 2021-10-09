@@ -17,10 +17,11 @@
 }
 
 #loader .e-card .e-card-content {
-  margin-top: 40px;
+  margin-top: 0px;
   text-align: center;
   width: 100%;
   margin-left: 0px;
+  position: static;
 }
 #loader .e-card .e-card-content h2 {
   color: black;
@@ -29,12 +30,43 @@
 
 ejs-textbox .description {
   height: 250px;
-
 }
-span{
-  color:red;
+ejs-textbox .title {
+  height: 70px;
+}
+span {
+  color: red;
   float: left;
 }
-#bottom-separator{
-  margin-top:340px;
+#bottom-separator {
+  margin-top: 40px;
+}
+.e-upload.e-control-wrapper,
+.e-bigger.e-small .e-upload.e-control-wrapper {
+  font-family: "Roboto", "Segoe UI", "GeezaPro", "DejaVu Serif", "sans-serif",
+    "-apple-system", "BlinkMacSystemFont";
+  border-style: none;
+}
+.e-upload .e-file-select-wrap .e-btn,
+.e-upload .e-upload-actions .e-btn,
+.e-bigger.e-small .e-upload .e-file-select-wrap .e-btn,
+.e-bigger.e-small .e-upload .e-upload-actions .e-btn {
+  font-family: inherit;
+  color: black;
+  float:left;
+  border-style:dotted;
+  margin-left:78px;
+  margin-top: 38px;
+  background-color:white;
+}
+.button{
+  margin-top: 35px;
+  border-style: dashed;
+  border-width:thin;
+  width: 250px;
+  height: 150px;
+  margin-left: -420px;
+}
+ul{
+  margin-right: 5000px;
 }

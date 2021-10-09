@@ -129,7 +129,9 @@
             
             <div class="row material" style="margin-top: 20px;">
                 <div class="col-xs-6 col-sm-6 col-lg-6 col-md-6">
-                    <ejs-textbox placeholder="title" cssClass="e-outline" formControlName="video_title" floatLabelType="Auto"></ejs-textbox>
+                    <ejs-textbox placeholder="title" 
+                    class="title"
+                    cssClass="e-outline" formControlName="video_title" floatLabelType="Auto"></ejs-textbox>
                     <span
                     *ngIf="
                       !uploadForm.get('video_title').valid &&
@@ -150,12 +152,12 @@
                   </span>
                 </div>
                 
-                <div class="col-xs-6 col-sm-6 col-lg-6 col-md-6">
+                <div class="col-xs-3 col-sm-1 col-lg-6 col-md-3">
                   <iframe width="100%" height="300px" class="logo" [src]="videoSrc"></iframe>
                 </div>
               
-                <div class="row material" style="margin-top: -80px;">
-                  <div class="col-xs-6 col-sm-6 col-lg-6 col-md-6">
+                <div class="row material" style="margin-top: -180px;">
+                  <div class="col-xs-1 col-sm-6 col-lg-6 col-md-6">
                     <ejs-textbox  class="description" placeholder="description" cssClass="e-outline" floatLabelType="Auto" formControlName="description_of_the_video"></ejs-textbox>
                 </div>
                 <span
@@ -184,7 +186,14 @@
       </span>
 
                 </div>
+                <div class="row material" >
+                  <div class="col-xs-6 col-sm-6 col-lg-6 col-md-6"><h5 style="color:black;float:left">Thumbnail</h5></div>
+                  <div class="button">
+                  <ejs-uploader cssClass="e-info" #defaultupload  autoUpload='false' [maxFileSize]=100000000  multiple = 'false'   allowedExtensions = '.png,.jpeg,.gif,.jpg,'[buttons]="buttons"></ejs-uploader>
+              </div>
+            </div>
                 <div class="e-card-separator" id="bottom-separator"></div>
+                
             </div>
       </form>
   </div>
