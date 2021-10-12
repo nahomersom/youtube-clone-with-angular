@@ -1,4 +1,4 @@
-import { PlayerPipe } from './player.pipe';
+import { PlayerPipe } from '../home/nav-bar/videoFilter.pipe';
 
 describe('PlayerPipe', () => {
   it('create an instance', () => {

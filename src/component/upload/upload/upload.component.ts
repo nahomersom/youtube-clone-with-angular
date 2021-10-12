@@ -32,16 +32,10 @@ export class UploadComponent implements OnInit {
     reader.onload = () => {
         this.video = reader.result;
     this.videoName = this.video;
+    
    this.router.navigate(['/upload/finalizingUpload',this.videoName]);
     };
 
-  //   if(this.selectedFile.size > 30720000){
-  //    this.error = "the file is too big";
-      
-  //  };
-  //  if(!this.error){
-  //  this.selected = true;
-  //  } 
 
    
   }

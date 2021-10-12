@@ -10,6 +10,8 @@ body {
   /* this is to make no margin in every direction*/
   font-family: Roboto, Arial, Helvetica, sans-serif;
   margin: 0;
+  overflow: hidden;
+  
 }
 a{
   font-family: Roboto, Arial, Helvetica, sans-serif;
@@ -27,7 +29,7 @@ hr{
 }
 
 .header {
-  margin-top: 15px;
+  margin-top: 1px;
   display: inline-flex;
 }
 #nav-menu .nav-menu-items #navbar-toogle{
@@ -52,23 +54,27 @@ nav ul #navbar-toogle .logo {
 }
 .header .search button {
     
-    margin-left:0px;
+    float: right;
     padding-top: 7px;
+    margin-right: 710px;
+    margin-top: -15px;
   }
-  
-.header input[type="text"] {
+  .e-outline.e-input-group input.e-input, .e-outline.e-float-input.e-input-group input, .e-outline.e-input-group.e-control-wrapper input.e-input, .e-outline.e-float-input.e-input-group.e-control-wrapper input, .e-outline.e-float-input input, .e-outline.e-float-input.e-control-wrapper input{
+border-style: none;
+  }
+ejs-autocomplete {
   margin-left: 550px;
   height: 35px;
   width: 550px;
-  border: 1px solid #cccc;
   outline-color: lightskyblue;
   padding-top: 19px;
   padding-bottom: 14px;
+  top:0;
 }
 
 .header button {
   padding-bottom: 10px;
-  margin-left: -4px;
+ 
   border: 1px solid #cccc;
   outline-color: lightskyblue;
   outline-style: none;
@@ -76,33 +82,38 @@ nav ul #navbar-toogle .logo {
   height: 37px;
 }
 
-.header .search .apps {
-  margin-left: 500px;
-  background-color: white;
+.header .search .row .icons {
+  float: left;
+  
+  margin-left:1700px;
 }
-
-.header .user-icon {
-  margin-left: 30px;
-  margin-top: 1px;
-  float: right;
+.header .search .row .icons .mic{
+  margin-top:-8px;
+  margin-left: -530px;
+}
+.header .search .row .icons .other-icons{
+  margin-left: 0px;
+  margin-top:-28px;
+}
+ .header .search .row .icons .other-icons .user-icon{
   background: #4f8bfa;
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  display: flex;
+  color:white;
   align-items: center;
   text-align: center;
-}
+  margin-top: -28px;
+  margin-left: 91px;
+} 
 
-.header .user-icon p {
-  color: #fff;
-  text-align: center;
-  margin-left: 9px;
-  margin-top:15px;
-}
+ .header .search .row .icons .other-icons .user-icon p{
+   text-align: center;
+   padding-top:4px;
+  }
 
 .types {
-  margin-top: -850px;
+
   margin-left: 200px;
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
@@ -120,10 +131,11 @@ nav ul #navbar-toogle .logo {
 }
 
 #nav-menu {
+  margin-top:-140px;
   background-color: white;
   width: 450px;
   height: 100vh;
-  margin-top: -128px;
+
 }
 .nav-menu-items li{
 padding-top:20px;

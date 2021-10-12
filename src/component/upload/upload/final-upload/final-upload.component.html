@@ -189,12 +189,28 @@
                 <div class="row material" >
                   <div class="col-xs-6 col-sm-6 col-lg-6 col-md-6"><h5 style="color:black;float:left">Thumbnail</h5></div>
                   <div class="button">
-                  <ejs-uploader cssClass="e-info" #defaultupload  autoUpload='false' [maxFileSize]=100000000  multiple = 'false'   allowedExtensions = '.png,.jpeg,.gif,.jpg,'[buttons]="buttons"></ejs-uploader>
+       
+                     <input
+          type="file"
+          name="finalizingUpload"
+          id="fileToUpload"
+          formControlName="thumbnail"
+          accept="image/*"
+          (change)="onThumbnailSelected($event)"
+        />
+
               </div>
             </div>
                 <div class="e-card-separator" id="bottom-separator"></div>
                 
             </div>
+            <div class="row">
+               <div class="col-xs-6 col-sm-6 col-lg-12 col-md-6">
+                 <div class="upload-button">
+              <button ejs-button cssClass="e-info" [disabled]="uploadForm.invalid" type="submit">Upload</button>
+            </div>
+          </div>
+          </div>
       </form>
   </div>
 </div>

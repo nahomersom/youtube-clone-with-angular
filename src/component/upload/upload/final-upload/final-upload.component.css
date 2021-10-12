@@ -53,20 +53,24 @@ span {
 .e-bigger.e-small .e-upload .e-upload-actions .e-btn {
   font-family: inherit;
   color: black;
-  float:left;
-  border-style:dotted;
-  margin-left:78px;
+  float: left;
+  border-style: dotted;
+  margin-left: 78px;
   margin-top: 38px;
-  background-color:white;
+  background-color: white;
 }
-.button{
+.button {
   margin-top: 35px;
   border-style: dashed;
-  border-width:thin;
+  border-width: thin;
   width: 250px;
   height: 150px;
   margin-left: -420px;
 }
-ul{
-  margin-right: 5000px;
+.upload-button{
+  float:right;
+  margin-top: 13px;
+}
+.thumbnail-upload{
+  margin-top: 90px;
 }

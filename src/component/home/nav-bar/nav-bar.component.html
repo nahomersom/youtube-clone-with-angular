@@ -11,16 +11,32 @@
 </head>
 
 <body>
+    
     <header>
+      
         <div class="header">
-
+          
             <form class="search">
-                <input type="text" placeholder="search">
-
-                <button>
+              <ejs-autocomplete  highlight="true" autofill="true" placeholder="Search" (select)="watchVideo($event)"  [fields]='fields'  [dataSource]='videoDetail' cssClass="e-outline">
+                <ng-template #noRecordsTemplate>
+                    <span class='norecord'>no video available</span>
+                </ng-template>
+              </ejs-autocomplete>
+                <button (click)="watchVideo($event)">
                     <img class="search-icon" src={{magnify}}>
                 </button>
+              
+                <!-- <ul *ngIf="searchText">                
+                    <li  class="list-group-item" *ngFor="let c of characters | filter: searchText">
+                    {{c}}
+                  </li>
+                </ul> -->
+                 <div class="row">
+                 <div class= "icons">
+                     <div class="mic">
                 <img src={{mic}}>
+            </div>
+                <div class="other-icons">
                 <a [routerLink]="['/upload']"><img class="apps" src="{{uploadVideo}}"></a>
                  <img src="{{apps}}">
                  <img src="{{bell}}">
@@ -28,6 +44,9 @@
                 <div class="user-icon">
                     <p>N</p>
                 </div>
+            </div>
+                </div>
+            </div>
             </form>
         </div>
 
@@ -40,8 +59,7 @@
     <nav id="nav-menu">
         <ul class="nav-menu-items">
             <div id="navbar-toogle">
-            
-     
+
             <img class="menu" src="{{menu}}">  <a [routerLink]="" (click)="goToStudio()" > <img class="logo" src="{{logo}}" ></a>
           
             </div>

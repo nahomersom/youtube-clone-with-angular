@@ -1,5 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
+import { Router } from '@angular/router';
+import { TrendingService } from '../home/trendings/trending.service';
 
 @Component({
   selector: 'app-studio',
@@ -8,8 +11,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StudioComponent implements OnInit {
   uploadedData:any;
-  
-  constructor(private http:HttpClient) { }
+  video:any;
+  play:any;
+  constructor(private http:HttpClient,private router: Router) { }
 
   ngOnInit(): void {
     this.http.get('http://localhost:3000/uploaded_file')
@@ -24,6 +28,10 @@ export class StudioComponent implements OnInit {
     this.http.delete('http://localhost:3000/uploaded_file/'+id)
     .subscribe(res => res = 'Delete successful');
     this.ngOnInit();
+  }
+  onWatchVideo(videoId){
+    this.router.navigate(['/home/watch', videoId]);
+
   }
 
 }

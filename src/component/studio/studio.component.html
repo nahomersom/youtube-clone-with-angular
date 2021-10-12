@@ -16,7 +16,9 @@
         <tbody>
        
             <tr height="300px" *ngFor='let uploaded of uploadedData'>
-                <td height="100"> <img src="{{uploaded.thumbnail}}"alt='' class='thumbnail-image' width="100" height="100"></td>
+                <td height="100"> 
+                    <a (click)="onWatchVideo(uploaded.id)">
+                    <img src="{{uploaded.thumbnail}}"alt='' class='thumbnail-image' width="100" height="100"></a></td>
                 <td height="100">{{uploaded.description_of_the_video}}</td>
                 <td height="100">{{uploaded.video_title}}</td>
                 <td>{{uploaded.date_of_upload}}</td>

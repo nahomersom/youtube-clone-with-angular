@@ -18,6 +18,7 @@ export class FinalUploadComponent implements OnInit {
   uploadForm:FormGroup;
   selectedThumbnail = null;
   thumbnail = null;
+  thumbnailBinary = null;
   error:string = null;
   public buttons: Object = {
     browse: '+',
@@ -50,20 +51,21 @@ export class FinalUploadComponent implements OnInit {
   }
   onThumbnailSelected(event){
     this.selectedThumbnail = event.target.files[0];
-    const reader = new FileReader();
-    reader.readAsDataURL(this.selectedThumbnail);
-    reader.onload = () => {
-        this.thumbnail = reader.result;
-        // console.log(this.thumbnail);
-        
+    
+    var reader = new FileReader();
+    reader.onloadend = () => {
+     
+        console.log(this.thumbnailBinary = reader.result);
+    this.thumbnail = this.thumbnailBinary;
+     console.log(this.thumbnail)
     };
    
-    if(this.selectedThumbnail.size > 33333333333333){
-     this.error = "the file is too big";
-    console.log(this.error);
+  //   if(this.selectedThumbnail.size > 33333333333333){
+  //    this.error = "the file is too big";
+  //   console.log(this.error);
       
-   };
-
+  //  };
+ reader.readAsDataURL(this.selectedThumbnail);
 
   }
   onSubmit(uploadData:Upload) {

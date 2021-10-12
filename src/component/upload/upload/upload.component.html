@@ -17,6 +17,7 @@
 
 
 </div> -->
+
 <div id="loader">
 <div tabindex="0" class="e-card" id="basic">
     <div class="e-card-header">
@@ -30,7 +31,7 @@
         
         <h3> Drag and drop video files to upload</h3>
         <p>Your videos will be private until you publish them</p>
-        <ejs-uploader cssClass="e-info" #defaultupload  autoUpload='false' [maxFileSize]=1000000000 (change)="onFileSelected($event)" multiple = 'false'   allowedExtensions = '.mp4,.mkv,.gif,.mpeg,.miv'[buttons]="buttons"></ejs-uploader>
+        <ejs-uploader cssClass="e-info" #defaultupload  autoUpload='false' [maxFileSize]=10000000000 (change)="onFileSelected($event)" multiple = 'false'   allowedExtensions = '.mp4,.mkv,.gif,.mpeg,.miv'[buttons]="buttons"></ejs-uploader>
         
     </div>
 </div>
